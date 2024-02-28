@@ -1,0 +1,15 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    username:
+        label: Username
+        span: row
+        spanClass: col-md-5
+        comment: This username should always appear as uppercase.
+
+    products:
+        label: Invoice position
+        type: repeater
+        groups: $/october/test/models/user/position_repeater.yaml

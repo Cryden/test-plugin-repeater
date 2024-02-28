@@ -1,4 +1,6 @@
-<?php namespace October\Test;
+<?php
+
+namespace October\Test;
 
 use Backend;
 use System\Classes\PluginBase;
@@ -42,7 +44,7 @@ class Plugin extends PluginBase
             $validator->extend('betwixt', \October\Test\Classes\BetwixtRule::class);
         });
 
-        \October\Test\Models\Page::extend(function($model) {
+        \October\Test\Models\Page::extend(function ($model) {
             $model->translatable = array_merge($model->translatable, [
                 'parent_id',
             ]);
@@ -102,7 +104,7 @@ class Plugin extends PluginBase
     public function registerPageSnippets()
     {
         return [
-           \October\Test\Components\KitchenSink::class => 'weather'
+            \October\Test\Components\KitchenSink::class => 'weather'
         ];
     }
 
@@ -198,6 +200,11 @@ class Plugin extends PluginBase
                         'label' => 'Products',
                         'icon' => 'icon-database',
                         'url' => Backend::url('october/test/products'),
+                    ],
+                    'repeater' => [
+                        'label' => 'Repeater with Recordfinder',
+                        'icon' => 'icon-database',
+                        'url' => Backend::url('october/test/repeate'),
                     ],
                 ],
             ],

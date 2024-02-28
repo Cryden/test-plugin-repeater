@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Repeate
+
+# Model Form Field configuration
+form: $/october/test/models/user/repeater_fields.yaml
+
+# Model Class name
+modelClass: October\Test\Models\User
+
+# Default redirect location
+defaultRedirect: october/test/repeate
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: october/test/repeate/update/:id
+    redirectClose: october/test/repeate
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: october/test/repeate
+    redirectClose: october/test/repeate
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
